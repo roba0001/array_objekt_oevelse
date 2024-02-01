@@ -12,6 +12,10 @@
       <h2></h2>
       <p></p>
       <img width="100%" src="" alt="" />
+
+      <h2 id="h2nr2"></h2>
+      <p id="pnr2"></p>
+      <img id="imgnr2" width="100%" src="" alt="" />
     </article>
 
     <script>
@@ -43,13 +47,23 @@
       const h2 = document.querySelector("h2");
       const img = document.querySelector("img");
 
+      const pnr2 = document.querySelector("#pnr2");
+      const h2nr2 = document.querySelector("#h2nr2");
+      const imgnr2 = document.querySelector("#imgnr2");
+
       //   p.textContent = yndlingsBand.navn;
       //   p.textContent = `Mit yndlingsband er: ${yndlingsBand.navn}`;
-      h2.textContent = "Mit yndlingsband er " + yndlingsBand.navn;
-      p.textContent += "Det er dannet i " + yndlingsBand.dannet;
-      p.textContent += ". Forsangere er " + yndlingsBand.medlemmer[0] + " og " + yndlingsBand.medlemmer[1];
-      img.src = yndlingsBand.billede;
-      img.alt = yndlingsBand.navn;
+      h2.textContent = "Mit yndlingsband er " + yndlingsBand[2].navn;
+      p.textContent += "Det er dannet i " + yndlingsBand[2].dannet;
+      p.textContent += ". Forsangere er " + yndlingsBand[2].medlemmer[0] + " og " + yndlingsBand[2].medlemmer[1];
+      img.src = yndlingsBand[2].billede;
+      img.alt = yndlingsBand[2].navn;
+
+      h2nr2.textContent = "Mit næst-yndlingsband er " + yndlingsBand[1].navn;
+      pnr2.textContent += "Det er dannet i " + yndlingsBand[1].dannet;
+      pnr2.textContent += ". Forsangere er " + yndlingsBand[1].medlemmer[1] + " og " + yndlingsBand[1].medlemmer[2];
+      imgnr2.src = yndlingsBand[1].billede;
+      imgnr2.alt = yndlingsBand[1].navn;
     </script>
   </body>
 </html>
