@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <a href="objekt.html">Objekt</a>
+    <h1>Playliste</h1>
+    <ul id="playliste"></ul>
+
+    <script>
+      const playliste = ["crazy frog", "ketchup song", "i will survive", "sunny", "baby", "sos", "superbass", "jag kommer", "we are the world", "where is the love"];
+      const liste = document.querySelector("#playliste");
+
+      playliste.forEach(lavPlayliste);
+      function lavPlayliste(elm) {
+        liste.innerHTML += "<li>" + elm + "</li>";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objekt</title>
+  </head>
+  <body>
+    <h1>Yndlings band</h1>
+
+    <article>
+      <h2></h2>
+      <p></p>
+      <img width="100%" src="" alt="" />
+    </article>
+
+    <script>
+      const yndlingsBand = [
+        {
+          navn: "5 seconds of summer",
+          dannet: "2010",
+          albums: ["Sidste sommer", "Næste jul", 5],
+          medlemmer: ["Peter", "Jytte", "Jens"],
+          billede: "dummy-image.webp",
+        },
+        {
+          navn: "The Beatles",
+          dannet: "1960",
+          albums: ["The beatles", "Album 2", "The white album"],
+          medlemmer: ["Ringo", "John", "Paul", "George"],
+          billede: "dummy-image.webp",
+        },
+        {
+          navn: "Mit band",
+          dannet: "2002",
+          albums: ["første album", "Andet album", "Tredje album"],
+          medlemmer: ["mig", "migselv", "me", "and I"],
+          billede: "dummy-image.webp",
+        },
+      ];
+
+      const p = document.querySelector("p");
+      const h2 = document.querySelector("h2");
+      const img = document.querySelector("img");
+
+      //   p.textContent = yndlingsBand.navn;
+      //   p.textContent = `Mit yndlingsband er: ${yndlingsBand.navn}`;
+      h2.textContent = "Mit yndlingsband er " + yndlingsBand.navn;
+      p.textContent += "Det er dannet i " + yndlingsBand.dannet;
+      p.textContent += ". Forsangere er " + yndlingsBand.medlemmer[0] + " og " + yndlingsBand.medlemmer[1];
+      img.src = yndlingsBand.billede;
+      img.alt = yndlingsBand.navn;
+    </script>
+  </body>
+</html>
